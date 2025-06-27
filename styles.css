@@ -13,15 +13,32 @@ body {
     position: relative;
 }
 
+.error {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff4040;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    display: none;
+    animation: shake 0.5s;
+    z-index: 1;
+}
+
 .login-box {
-    background: #4a2c2c;
-    border: 5px solid #d4a017;
+    background: #8b4513; /* Brighter reddish-brown */
+    border: 5px solid #ffd700; /* Brighter gold */
     border-radius: 10px;
     padding: 20px;
     text-align: center;
     width: 300px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     animation: fadeIn 0.5s ease-in;
+    position: relative;
 }
 
 .header {
@@ -29,14 +46,16 @@ body {
 }
 
 .header h2 {
-    color: #d4a017;
+    color: #ffd700;
     margin: 0;
-    font-size: 1.5em;
+    font-size: 24px; /* Matches screenshot text size */
+    font-weight: bold;
 }
 
 .header p {
     color: #fff;
     margin: 5px 0;
+    font-size: 14px;
 }
 
 .close-btn {
@@ -46,18 +65,20 @@ body {
     background: none;
     border: none;
     color: #fff;
-    font-size: 1.5em;
+    font-size: 24px;
     cursor: pointer;
 }
 
 .logo-img {
     border-radius: 50%;
-    border: 2px solid #d4a017;
+    border: 2px solid #ffd700;
+    width: 100px;
+    height: 100px;
 }
 
 .lock-icon {
-    font-size: 2em;
-    color: #d4a017;
+    font-size: 32px;
+    color: #ffd700;
     margin: 10px 0;
 }
 
@@ -69,16 +90,19 @@ input {
     border-radius: 5px;
     background: #333;
     color: #fff;
+    font-size: 14px;
 }
 
 .access-btn {
-    background: #d32f2f;
+    background: #ff4040; /* Brighter red */
     border: none;
     padding: 10px 20px;
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
     transition: transform 0.3s;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .access-btn:hover {
@@ -90,22 +114,13 @@ input {
 }
 
 .footer p {
-    color: #d4a017;
+    color: #ffd700;
     margin: 5px 0;
+    font-size: 12px;
 }
 
 .crown {
     color: #ffd700;
-}
-
-.error {
-    display: none;
-    background: #d32f2f;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-    animation: shake 0.5s;
 }
 
 @keyframes fadeIn {
@@ -114,9 +129,9 @@ input {
 }
 
 @keyframes shake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
-    100% { transform: translateX(0); }
+    0% { transform: translateX(-50%) translateY(0); }
+    25% { transform: translateX(-50%) translateY(-5px); }
+    50% { transform: translateX(-50%) translateY(5px); }
+    75% { transform: translateX(-50%) translateY(-5px); }
+    100% { transform: translateX(-50%) translateY(0); }
 }
