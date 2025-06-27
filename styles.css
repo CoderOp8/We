@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1a1a1a;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+}
+
+.login-box {
+    background: #4a2c2c;
+    border: 5px solid #d4a017;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s ease-in;
+}
+
+.header {
+    position: relative;
+}
+
+.header h2 {
+    color: #d4a017;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.header p {
+    color: #fff;
+    margin: 5px 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.logo-img {
+    border-radius: 50%;
+    border: 2px solid #d4a017;
+}
+
+.lock-icon {
+    font-size: 2em;
+    color: #d4a017;
+    margin: 10px 0;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: #fff;
+}
+
+.access-btn {
+    background: #d32f2f;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.access-btn:hover {
+    transform: scale(1.05);
+}
+
+.footer {
+    margin-top: 20px;
+}
+
+.footer p {
+    color: #d4a017;
+    margin: 5px 0;
+}
+
+.crown {
+    color: #ffd700;
+}
+
+.error {
+    display: none;
+    background: #d32f2f;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    animation: shake 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
